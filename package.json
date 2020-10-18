@@ -1,19 +1,25 @@
 {
-  "name": "mongoose_skeleton",
+  "name": "fitgeek",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "description": "Workout planner and tracker using MongoDB!",
+  "main": "seeders.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "watch": "nodemon server.js",
-    "seed": "node seeders/seed.js"
+    "start": "node server.js"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hawenger/fitGeek.git"
+  },
+  "author": "Hannah Wenger",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hawenger/fitGeek/issues"
+  },
+  "homepage": "https://github.com/hawenger/fitGeek#readme",
   "dependencies": {
-    "express": "^4.16.3",
-    "mongoose": "^5.3.16",
-    "morgan": "^1.9.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9",
+    "morgan": "^1.10.0"
   }
 }
