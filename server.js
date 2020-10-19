@@ -16,7 +16,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/fitGeekDB", {
 });
 
 // routes
-//app.use(require("./public/api.js"));
+require("./public/html-routes.js")(app);
 
 app.listen(PORT, () => {
     console.log(`App running on port ${PORT}!`);
