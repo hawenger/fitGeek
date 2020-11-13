@@ -1,5 +1,3 @@
-//const router = require("express").Router();
-
 const API = {
     async getLastWorkout() {
         let res;
@@ -44,4 +42,5 @@ const API = {
         return json;
     },
 };
-//module.exports = API;
+
+module.exports = API;

@@ -1,10 +1,11 @@
-let mongoose = require("mongoose");
-let db = require("../models");
+//let mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost/workout", {
-    useNewUrlParser: true,
-    useFindAndModify: false
-});
+//workoutSeed.forEach(element => { 
+//    const exercise = element;
+//    exercise = new Exercise;
+//    exercise.save();
+//    
+//});
 
 let workoutSeed = [{
         day: new Date().setDate(new Date().getDate() - 10),
