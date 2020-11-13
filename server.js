@@ -3,10 +3,13 @@ const mongoose = require("mongoose");
 const logger = require("morgan")
 
 const db = require("./models");
+require('./models/workout');
 
 const app = express();
 
-mongoose.connect('mongodb://localhost:27017/fitGeekDB', { useNewUrlParser: true });
+mongoose.Promise = global.Promise;
+mongoose.connect(process.env.MONGODB_URI || `mongodb://localhost:27017/fitGeekDB`);
+//mongoose.connect('mongodb://localhost:27017/fitGeekDB', { useNewUrlParser: true });
 
 app.use(logger("dev"));
 app.use(express.urlencoded({ extended: true }));
@@ -15,8 +18,9 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // routes
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
+//require("./public/api.js")(app);
+require('./routes/api-routes')(app);
+require("./Routes/html-routes")(app);
 
 
 const PORT = process.env.PORT || 3000;

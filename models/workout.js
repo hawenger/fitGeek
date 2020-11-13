@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-mongoose.connect('mongodb://localhost:27017/fitGeekDB', { useNewUrlParser: true });
 
 const workoutSchema = new mongoose.Schema ({
     day: Date,
