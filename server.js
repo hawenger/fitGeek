@@ -2,14 +2,20 @@ const express = require("express");
 const mongoose = require("mongoose");
 const logger = require("morgan")
 
-const db = require("./models");
-require('./models/workout');
+//require('./models/workout.js');
 
 const app = express();
+const db = require("./models");
 
-mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URI || `mongodb://localhost:27017/fitGeekDB`);
-//mongoose.connect('mongodb://localhost:27017/fitGeekDB', { useNewUrlParser: true });
+mongoose.connect(
+    process.env.MONGODB_URI || 'mongodb://localhost/workout',
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+      useFindAndModify: false
+    }
+  );
 
 app.use(logger("dev"));
 app.use(express.urlencoded({ extended: true }));
@@ -18,9 +24,9 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // routes
-//require("./public/api.js")(app);
-require('./routes/api-routes')(app);
-require("./Routes/html-routes")(app);
+
+require('./routes/api-routes.js')(app);
+require("./Routes/html-routes.js")(app);
 
 
 const PORT = process.env.PORT || 3000;

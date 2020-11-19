@@ -1,3 +1,4 @@
+
 const API = {
     async getLastWorkout() {
         let res;
@@ -12,7 +13,10 @@ const API = {
     },
     async addExercise(data) {
         const id = location.search.split("=")[1];
-
+        //let x =Math.floor(Math.random() * 999); 
+        //let i = Math.floor(Math.random() * 999); 
+        //const id = ((x + i) * Math.floor(Math.random() * 999)).toString(); //location.search.split("=")[1];
+        //const id = "lobe";
         const res = await fetch("/api/workouts/" + id, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
