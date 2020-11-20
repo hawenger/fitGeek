@@ -1,6 +1,4 @@
-  
-
-const mongoose = require('mongoose');
+ const mongoose = require('mongoose');
 const Workout = mongoose.model('Workout');
 
 
@@ -56,11 +54,9 @@ module.exports = function(app) {
     
       })
     //app.get("/api/workouts", (req, res) => {
-    //    db.Workout.aggregate([{
-    //        $project : {
-    //            day: true,
-    //            exercises: true,
-    //            totalDuration: { $sum: "$exercises.duration" }
+    //    db.Workout.
+    //      
+    //            day: 
     //            
     //        }
     //    }])
@@ -82,8 +78,7 @@ module.exports = function(app) {
     //});
 //
     //app.put("/api/workouts/:id", (req, res) => {
-    //    db.Workout.updateOne({ _id: mongojs.ObjectId(req.params.id) }, { $push: { exercises: req.body }})
-    //    .then(exercise => {
+    //
     //        res.json(exercise);
     //    }).catch(err => {
     //        console.log(err);
@@ -91,13 +86,7 @@ module.exports = function(app) {
     //});
 //
     //app.get("/api/workouts/range", (req, res) => {
-    //    db.Workout.aggregate([
-    //        { $match: { day: { $gt: new Date(new Date() - 7 * 60 * 60 * 24 * 1000) } } },
-    //        { $project: {
-    //            day: true,
-    //            exercises: true,
-    //            totalDuration: { $sum: "$exercises.duration" },
-    //            totalWeight: { $sum: "$exercises.weight" }
+ 
     //            }
     //        }
     //    ])
