@@ -29,8 +29,6 @@ require('./routes/api-routes.js')(app);
 require("./Routes/html-routes.js")(app);
 
 
-const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
-    console.log(`App running on port ${PORT}!`);
-});
+
+app.listen(process.env.PORT || 3000);
